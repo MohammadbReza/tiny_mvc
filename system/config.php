@@ -1,6 +1,6 @@
 <?php
 
-$base_url = "http://localhost/mvc";
+$base_url = "http://localhost/mvc/";
 
 $base_dir = "/mvc/";
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace system\router;
+namespace System\router;
 
 
 use ReflectionMethod;

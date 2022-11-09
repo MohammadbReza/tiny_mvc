@@ -1,13 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>This is a View</h1>
-    <p><?=$productName?></p>
-</body>
-</html>
+
+<?php $this->include("app.layouts.header",['categories'=>$categories]); ?>
+    <section class="container my-5">
+        <!-- Example row of columns -->
+        <section class="row">
+            <section class="col-md-4">
+                <?php foreach ($articles as $article) { ?>
+                <h2><?= $article['title'] ?></h2>
+                <p><?= substr($article['body'],0,25); ?></p>
+                <p><a class="btn btn-primary" href="<?php $this->url('home/show/'.$article['id']); ?>" role="button">View details »</a></p>
+            </section>
+            <?php } ?>
+        </section>
+    </section>
+    <?php $this->include("app.layouts.footer"); ?>
